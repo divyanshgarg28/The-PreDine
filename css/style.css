@@ -202,9 +202,10 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  /* font-family: inherit;
   font-size: inherit;
-  line-height: inherit; }
+  line-height: inherit;  */
+}
 
 button,
 input {
@@ -8047,7 +8048,7 @@ h1, h2, h3, h4, h5,
   padding: 0; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      background: #031422 !important;
       position: relative;
       top: 0;
       padding: 10px 15px; } }
@@ -8133,7 +8134,7 @@ h1, h2, h3, h4, h5,
         color: #fff; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8148,7 +8149,8 @@ h1, h2, h3, h4, h5,
     top: 0;
     color: white;
     margin-top: -130px;
-    background: #1d262de3 !important;
+    background: #031422 !important; 
+    /* #1d262de3 */
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
     .ftco-navbar-light.scrolled .nav-item.active > a {
@@ -8179,7 +8181,7 @@ h1, h2, h3, h4, h5,
         padding-right: 0 !important; } }
     .ftco-navbar-light.scrolled .navbar-toggler {
       border: none;
-      color: rgba(0, 0, 0, 0.5) !important;
+      color: white !important;
       border-color: rgba(0, 0, 0, 0.5) !important;
       cursor: pointer;
       padding-right: 0;
@@ -8647,7 +8649,7 @@ h1, h2, h3, h4, h5,
     -ms-border-radius: 5px;
     border-radius: 5px; }
   .staff .text {
-    background: #fff;
+    /* background: #fff; */
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -8659,7 +8661,8 @@ h1, h2, h3, h4, h5,
       font-weight: 600; }
     .staff .text .position {
       font-size: 14px;
-      color: rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      color: orange;
       display: block; }
     .staff .text .faded {
       opacity: 1;
@@ -8989,15 +8992,18 @@ textarea.form-control {
     font-size: 100px;
     display: block;
     margin-bottom: 0;
-    color: rgba(0, 0, 0, 0.2);
-    color: #ffa323;
+    color:  #c59d5f;
+    /* color: #ffa323; */
     line-height: 1;
-    font-family: "Miss Fajardose", cursive;
+    font-family: 'Herr Von Muellerhoff', cursive;
     margin-top: 0;
     z-index: -1; }
   .heading-section h2 {
+    color: #ffa323;
     font-size: 50px;
-    font-weight: 900; }
+    font-weight: 500;
+    font-family: "Monoton", cursive;
+   }
   .heading-section.heading-section-white .subheading {
     color: rgba(255, 255, 255, 0.7); }
   .heading-section.heading-section-white h2 {
@@ -9025,7 +9031,8 @@ textarea.form-control {
     bottom: 0;
     content: '';
     opacity: .8;
-    background: #fff;
+    /* background: #fff; */
+    background: rgb(2, 13, 22);
     z-index: -1; }
   .testimony-section .owl-carousel {
     margin: 0; }
