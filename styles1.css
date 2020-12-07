@@ -348,7 +348,7 @@ p{
 {
     padding: 3.9em 0;
     overflow: hidden;
-    background: url(./images/wooden-snack-platter-with-marmelades-glass-tea.jpg) center no-repeat;
+    background: url(./images/hero.jpg) center no-repeat;
     background-size: cover;
 }
 .between
@@ -379,7 +379,7 @@ p{
 {
     padding: 3.9em 0;
     overflow: hidden;
-    background: url(./images/perfect-blend.jpg) center no-repeat;
+    background: url(./images/wooden-snack-platter-with-marmelades-glass-tea.jpg) center no-repeat;
     background-size: cover;
 }
 .culinary-delight
@@ -390,8 +390,8 @@ p{
 /* footer */
 footer
 {
-    padding: 7.9rem 0;
-    background-color: #1d262d ;
+    padding: 5.9rem 0;
+    background-color: #031422 ;
     color: white;
     text-align: center;
     position: relative;
@@ -400,7 +400,7 @@ footer
 {
     width: 7rem;
     height: 7rem;
-    background-color: #1d262d;
+    background-color: #031422;
     position: absolute;
     top: -3rem;
     left: 50%;
@@ -483,6 +483,31 @@ footer
     margin-left: 10.5rem;
 }
 
+.sec-4 p{
+    color: grey;
+    position: relative;
+    margin-bottom: 10px;
+}
+.sec-4 p::after
+{
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    right: 0px;
+    bottom: -10px;
+    background-color: yellow;
+    transition: all .3s;
+}
+.sec-4 p:hover::after
+{
+    width: 100%;
+
+}
+hr{
+    opacity: 0.2;
+}
 /* Media Queries */
 @media screen and (min-width:900px)
 {
