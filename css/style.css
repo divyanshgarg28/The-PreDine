@@ -8754,9 +8754,9 @@ h1, h2, h3, h4, h5,
       .blog-entry .text .heading a {
         color: #000000; }
     .blog-entry .text .meta-chat {
-      color: rgba(0, 0, 0, 0.3); }
+      color: orange }
     .blog-entry .text .read {
-      color: #000000;
+      color: orange;
       font-size: 14px; }
   .blog-entry .meta > div {
     display: inline-block;
@@ -8764,7 +8764,7 @@ h1, h2, h3, h4, h5,
     margin-bottom: 5px;
     font-size: 14px; }
     .blog-entry .meta > div a {
-      color: rgba(0, 0, 0, 0.3);
+      color: orange;
       font-size: 15px; }
       .blog-entry .meta > div a:hover {
         color: #cccccc; }

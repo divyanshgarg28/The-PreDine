@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>The PreDine</title>
+  
+  <link rel="icon" href="./images/—Pngtree—business logo design free logo_915991.png">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style-4.css">
+  <link rel="stylesheet" href="index.html">
+
+  
+</head>
+
+<body>
+
+  <div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+    <div class="login-form">
+      <form class="sign-in-htm" action="index.html" method="POST">
+        <div class="group">
+          <label for="user" class="label">Username</label>
+          <input  name="username" type="text" class="input" >
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input  name="password" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <input id="check" type="checkbox" class="check" checked>
+          <label for="check"><span class="icon"></span> Keep me Signed in</label>
+        </div>
+        <div class="group">
+          <!-- <input type="submit" class="button" value="Sign In"> -->
+          <!-- <button type="submit" class="button"> Sign In</button> -->
+          <a href="index.html" class="button" style="text-align: center;">Sign In</a>
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <a href="#forgot">Forgot Password?</a>
+        </div>
+      </form>
+      <form class="sign-up-htm" id="form"  action="index.html" method="POST">
+        <div class="group">
+          <label for="user" class="label">Username</label>
+          <input id="username" name="username" type="text" class="input" pattern="[a-z]*" title="Smallcase with no special Symbols and spaces">
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small id="small">Error Message</small>
+        </div>
+        <div class="group">
+          <label for="email" class="label">Email</label>
+          <input id="email" name="email" type="text" class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="username@domain.com">
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small id="small">Error Message</small>
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input id="password" name="password" type="password" class="input" data-type="password">
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small id="small">Error Message</small>
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Confirm Password</label>
+          <input id="re-password" type="password" class="input" data-type="password">
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <span class="text-danger" id="danger"></span>
+          <small id="small">Error Message</small>
+        </div>
+        <button type="submit">Submit</button>
+       
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+    const form=document.getElementById("form");
+    const username=document.getElementById("username");
+    const email=document.getElementById("email");
+    const password1=document.getElementById("password");
+    const password2=document.getElementById("re-password");
+    const small=document.getElementById("small");
+
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        
+        checkInput();
+    });
+    function checkInput()
+    {
+        const usernameValue=username.value;
+        const emailValue=email.value;
+         const password1Value=password1.value;
+         const password2Value=password2.value;
+
+        if(usernameValue==="")
+        {
+            showError(username,"Username cannot be blank");
+        }
+        else{
+            showSuccess(username);
+        }
+        if(emailValue==="")
+        {
+            showError(email,"Email cannot be blank");
+        }
+        else{
+            showSuccess(email);
+        }
+        if(password1Value==="")
+        {
+            showError(password1,"Password cannot be blank");
+        }
+        else{
+            showSuccess(password1);
+        }
+        if(password2Value==="")
+        {
+            showError(password2,"Password cannot be blank");
+        }
+        else{
+            showSuccess(password2);
+        }
+
+    }
+    function showError(input,msg)
+    {
+        const formControl=input.parentNode;
+        formControl.className="group error";
+        const small=formControl.querySelector('small');
+        small.innerHTML=msg;
+    }
+
+    function showSuccess(input)
+    {
+        const formControl=input.parentNode;
+        formControl.className="group success";
+    }
+</script>
+  
+
+</body>
+
+</html>
